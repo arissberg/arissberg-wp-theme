@@ -26,6 +26,8 @@ jspm_packages
 
 # Misc
 hot
+dist
+public
 #mix-manifest.json
 
 # Optional REPL history

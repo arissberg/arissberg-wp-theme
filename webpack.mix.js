@@ -1,5 +1,6 @@
 const mix = require('laravel-mix');
 const tailwindcss = require('tailwindcss');
+const postcssImport = require('postcss-import');
 
 /*
  |--------------------------------------------------------------------------
@@ -22,8 +23,9 @@ mix
     },
   })
 
-  .js('src/js/app.js', 'dist/js/bundle.min.js')
-  .sass('src/scss/app.scss', 'dist/css/bundle.min.css')
+  .js('src/js/app.js', 'public/js')
+  .postCss('src/css/site.css', 'public/css', [postcssImport()])
+  // .sass('src/scss/app.scss', 'dist/css/bundle.min.css')
 
   // Cache busting
   .version()
@@ -33,12 +35,11 @@ mix
     postCss: [tailwindcss('./tailwind.config.js')],
   })
 
-  // Move images to dist directory
-  .copyDirectory('src/img', 'dist/img')
+  // Move images to public directory
+  .copyDirectory('src/img', 'public/img')
 
-  // Move fonts to dist directory
-  .copyDirectory('src/fonts', 'dist/fonts');
-
+  // Move fonts to public directory
+  .copyDirectory('src/fonts', 'public/fonts');
 
 // Full API
 // mix.js(src, output);
