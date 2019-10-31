@@ -1,0 +1,1 @@
+These functions are used to load template parts (partials) or actions when used within action hooks, and they probably should never be updated or modified.

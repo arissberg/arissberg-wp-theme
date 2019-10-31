@@ -1,0 +1,36 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  @apply bg-white overflow-x-hidden;
+}
+
+section,
+.container {
+  position: relative;
+}
+
+.lazy {
+  position: absolute;
+}
+
+hr {
+  @apply bg-blue-400;
+  border: 0;
+  height: 2px;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+  outline: none;
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: 0;
+}
