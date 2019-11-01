@@ -15,7 +15,7 @@
 if ( ! function_exists( 'ab_custom_login_logo' ) ) :
 function ab_custom_login_logo() {
   echo '<style type="text/css">
-  h1 a { background-image: url(' . get_bloginfo( 'template_directory' ) . '/dist/img/aquent-dev6.svg) !important; height: 35px!important; width:300px!important; background-size: contain!important;}
+  h1 a { background-image: url(' . get_bloginfo( 'template_directory' ) . '/public/img/aquent-dev6.svg) !important; height: 35px!important; width:300px!important; background-size: contain!important;}
   body.login{ background: #fff; }
   </style>';
 }

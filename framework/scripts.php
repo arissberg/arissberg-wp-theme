@@ -4,17 +4,21 @@
 \* -------------------------------------------------------------------------- */
 
 function hop_queue_theme_assets() {
-  wp_enqueue_script( 'script-bundle', mix('/dist/js/bundle.min.js'), array(), wp_get_theme()->get('Version'), true );
-  wp_enqueue_style( 'style-bundle', mix('/dist/css/bundle.min.css'), array(), wp_get_theme()->get('Version') );
+  wp_enqueue_script( 'script-bundle', mix('/public/js/site.js'), array(), wp_get_theme()->get('Version'), true );
+  wp_enqueue_style( 'style-bundle', mix('/public/css/site.css'), array(), wp_get_theme()->get('Version') );
 };
 add_action( 'wp_enqueue_scripts', 'hop_queue_theme_assets' );
 
 
 function hop_gutenberg_scripts() {
-	wp_enqueue_script( 'be-editor', mix('/dist/js/editor.min.js'), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get('Version'), true);
+	wp_enqueue_script( 'be-editor', mix('/public/js/editor.js'), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get('Version'), true);
 }
 //add_action( 'enqueue_block_editor_assets', 'hop_gutenberg_scripts' );
 
+function remove_block_css(){
+  wp_dequeue_style( 'wp-block-library-theme' );
+}
+add_action( 'wp_enqueue_scripts', 'remove_block_css', 100 );
 
 /* -------------------------------------------------------------------------- *\
     defer or asynchronously load scripts

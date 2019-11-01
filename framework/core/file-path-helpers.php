@@ -25,7 +25,7 @@ if ( ! function_exists('__a')) {
    */
   function __a()
   {
-    return __t() . 'dist/';
+    return __t() . 'public/';
   }
 }
 

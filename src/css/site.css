@@ -9,8 +9,8 @@
   Elements
     -  Unclassed HTML elements (p, h1 etc)
 ========================================================================== */
-/* @import "elements/elements.scss";
-@import "typography/typography.scss"; */
+@import "elements/elements.css";
+@import "typography/typography.css";
 
 /* ==========================================================================
   Components
@@ -34,7 +34,7 @@
   Site
   - Containers, navs, page structure etc.
 ========================================================================== */
-/* @import "site/site.scss"; */
+@import "site/site.css";
 
 /* ==========================================================================
   Utilities

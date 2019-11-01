@@ -17,7 +17,7 @@
 
   <?php do_action( 'ab_post_start' ); ?>
 
-  <div class="post-content">
+  <div class="entry-content">
 		<?php
 		the_content(
 			sprintf(

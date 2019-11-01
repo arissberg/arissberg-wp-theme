@@ -6,6 +6,10 @@
 
 body {
   @apply bg-white overflow-x-hidden;
+
+  &.admin-bar {
+    margin-top: 32px;
+  }
 }
 
 section,
@@ -27,6 +31,7 @@ img {
   vertical-align: middle;
   border-style: none;
   outline: none;
+  width: 100%;
   max-width: 100%;
   height: auto;
 }

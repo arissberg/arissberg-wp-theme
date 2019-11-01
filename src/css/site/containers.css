@@ -1,0 +1,60 @@
+/* @responsive {
+  .container, .container-narrow, .container-post, .alignwide {
+    width: 100vw;
+    padding-right: theme('container.padding');
+    padding-left: theme('container.padding');
+  }
+
+  .container {
+    max-width: theme('screens.xxl');
+  }
+
+  .container-narrow, .alignwide {
+    max-width: theme('screens.xl');
+  }
+
+  .container-post {
+    max-width: theme('screens.md');
+  }
+} */
+
+.container.alignwide,
+.container.alignfull {
+	/* margin: 32px calc(50% - 50vw);
+	max-width: 100vw;
+  width: 100vw; */
+
+}
+.container.alignwide {
+  max-width: theme('screens.xl');
+}
+
+/* @media (max-width: 920px) {
+	.alignwide {
+		margin: 32px calc( ( 767px - 920px ) / 2 );
+		max-width: 920px;
+		width: 920px;
+	}
+} */
+
+.container-slider {
+  @apply px-6;
+  max-width: 500px;
+  //width: 80%;
+
+  @screen sm {
+    max-width: theme('screens.xl');
+    width: 60%;
+  }
+
+  @screen md {
+    width: 100%;
+    @apply px-24;
+  }
+
+  @screen lg {
+    padding-right: theme('container.padding');
+    padding-left: theme('container.padding');
+  }
+}
+

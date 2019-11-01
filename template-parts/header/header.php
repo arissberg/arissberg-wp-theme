@@ -1,9 +1,9 @@
 <div class="top-navbar-container w-screen">
-  <div class="mx-auto px-8 py-3 flex justify-between items-center">
+  <div class="container px-8 py-3 flex justify-between items-center">
 
     <div class="site-branding">
 
-    <?php if ( $logo_default_url || $logo_white_url ) : ?>
+    <?php if ( isset($logo_default_url) || isset($logo_white_url) ) : ?>
       <a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
         <img class="h-6 w-auto default-logo" src="<?php echo esc_html( $logo_default_url ); ?>" alt="<?php echo esc_html( $logo_text ); ?>">
         <img class="h-6 w-auto white-logo" src="<?php echo esc_html( $logo_white_url ); ?>" alt="<?php echo esc_html( $logo_text ); ?>">
@@ -15,19 +15,22 @@
 
     <div class="primary-menu-container">
       <div class="global-menu">
-        <?= ( $primary_menu ) ? $primary_menu : ''; ?>
+        <?= ( isset($primary_menu) ) ? $primary_menu : ''; ?>
       </div>
 
+      <?php if ( isset($secondary_menu) ) : ?>
       <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
         <path class="shape-overlays__path"></path>
         <path class="shape-overlays__path"></path>
         <path class="shape-overlays__path"></path>
       </svg>
+      <?php endif; ?>
     </div>
 
+    <?php if ( isset($secondary_menu) ) : ?>
     <div class="secondary-menu-container flex items-center">
 
-      <?= ( $secondary_menu ) ? $secondary_menu : ''; ?>
+      <?= $secondary_menu ?>
 
       <div class="hamburger js-hover">
         <div class="hamburger__line hamburger__line--01">
@@ -48,6 +51,7 @@
       </div>
 
     </div>
+    <?php endif; ?>
 
   </div>
 </div>

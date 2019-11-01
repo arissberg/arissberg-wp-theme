@@ -6,9 +6,9 @@
 
 ?>
 
-<section class="widgets py-12 bg-blue-600 text-white">
+<section class="widgets py-6 bg-blue-600 text-white">
 
-  <div class="container-narrow mx-auto flex flex-wrap lg:flex-no-wrap items-center">
+  <div class="container mx-auto flex flex-wrap lg:flex-no-wrap items-center">
 
     <?php if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
     <div class="widget w-full text-center lg:text-left">
@@ -30,11 +30,11 @@
 
   </div>
 
-  <div class="container-narrow mx-auto flex flex-wrap lg:flex-no-wrap items-center">
-    <div class="w-full text-center lg:text-left">
-      <?= d6_footer_navigation(); ?>
+  <div class="container mx-auto flex flex-wrap lg:flex-no-wrap items-center">
+    <div class="w-full text-center lg:text-left text-xs">&copy; <?php echo date("Y"); ?> | <?= get_bloginfo( 'name' ) ?></div>
+    <div class="w-full text-center lg:text-right">
+      <?= ab_footer_navigation(); ?>
     </div>
-    <div class="w-full text-center lg:text-right text-xs">Copyright &copy; <?php echo date("Y"); ?></div>
   </div>
 
 </section>

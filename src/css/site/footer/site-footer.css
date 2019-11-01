@@ -1,0 +1,23 @@
+.site-footer {
+  position: relative;
+
+  a {
+    @apply text-white;
+  }
+
+  .footer-widget-nav ul {
+    columns: 2;
+    @apply text-white;
+
+    li a {
+      @apply text-white;
+      @apply leading-loose;
+    }
+  }
+
+  .pk-social-links-link {
+    color: white;
+    font-size: 1.4rem;
+  }
+
+}

@@ -3,11 +3,17 @@ module.exports = {
   important: false,
   separator: ':',
   theme: {
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      xxl: '1440px',
+    },
     colors: {
       transparent: 'transparent',
 
       black: '#000',
-      blackSemi: 'rgba(0,0,0,0.8)',
       white: '#fff',
 
       gray: {
@@ -30,10 +36,6 @@ module.exports = {
         500: '#053C7E',
         600: '#000029',
       },
-
-      blueSemi: 'rgba(5,60,126,0.8)',
-
-      red: '#E53E3E',
 
       linkedin: '#007bb6',
       youtube: '#ff0000',
@@ -59,7 +61,7 @@ module.exports = {
     }),
     fontFamily: {
       sans: [
-        'Poppins',
+        'gill-sans-nova',
         '"Helvetica Neue"',
         'Arial',
         '"Noto Sans"',
@@ -79,11 +81,30 @@ module.exports = {
         'monospace',
       ],
     },
+    fontSize: {
+      xs: '0.875rem',
+      sm: '1rem',
+      base: '1.125rem',
+      lg: '1.25rem',
+      xl: '1.5rem',
+      '2xl': '1.875rem',
+      '3xl': '2.25rem',
+      '4xl': '3rem',
+      '5xl': '4rem',
+      '6xl': '5rem',
+      '8xl': '6rem',
+    },
+    fontWeight: {
+      light: '300',
+      normal: '400',
+    },
+    container: {
+      center: true,
+      padding: '2rem',
+    },
     extend: {},
   },
   variants: {},
-  corePlugins: {
-    container: false,
-  },
+  corePlugins: {},
   plugins: [],
 };

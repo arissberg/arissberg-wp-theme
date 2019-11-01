@@ -102,8 +102,7 @@ add_action( 'ab_body_start', 'ab_navbar_primary' );
 /**
  * Main Site Footer
  */
-add_action( 'ab_site_footer', 'ab_newsletter_subscribe', 10 );
-add_action( 'ab_site_footer', 'ab_footer_widgets', 11 );
+add_action( 'ab_site_footer', 'ab_footer_widgets', 10 );
 
 
 

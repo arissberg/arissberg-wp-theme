@@ -1,6 +1,7 @@
 const mix = require('laravel-mix');
 const tailwindcss = require('tailwindcss');
 const postcssImport = require('postcss-import');
+const postcssNested = require('postcss-nested');
 
 /*
  |--------------------------------------------------------------------------
@@ -23,16 +24,19 @@ mix
     },
   })
 
-  .js('src/js/app.js', 'public/js')
-  .postCss('src/css/site.css', 'public/css', [postcssImport()])
-  // .sass('src/scss/app.scss', 'dist/css/bundle.min.css')
+  .js('src/js/site.js', 'public/js')
+  .postCss('src/css/site.css', 'public/css')
 
   // Cache busting
   .version()
 
   .options({
     processCssUrls: false,
-    postCss: [tailwindcss('./tailwind.config.js')],
+    postCss: [
+      postcssImport(),
+      tailwindcss('./tailwind.config.js'),
+      postcssNested(),
+    ],
   })
 
   // Move images to public directory

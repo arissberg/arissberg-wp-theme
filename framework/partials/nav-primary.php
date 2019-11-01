@@ -14,8 +14,8 @@ if ( ! function_exists( 'ab_navbar_primary' ) ) :
 
     // Get navbar settings.
     $template_args['logo_text']           = get_theme_mod( 'navbar_logo_text', get_bloginfo( 'name' ) );
-    $template_args['logo_default_url']    = get_theme_mod( 'navbar_logo_default_url', __t() . 'dist/img/aquent-dev6.svg' );
-    $template_args['logo_white_url']      = get_theme_mod( 'navbar_logo_white_url', __t() . 'dist/img/aquent-dev6-white.svg' );
+    $template_args['logo_default_url']    = get_theme_mod( 'navbar_logo_default_url', __t() . 'public/img/default-logo-black.svg' );
+    $template_args['logo_white_url']      = get_theme_mod( 'navbar_logo_white_url', __t() . 'public/img/default-logo-white.svg' );
 
     // Primary Menu
     if ( has_nav_menu( 'primary-menu' ) ) :

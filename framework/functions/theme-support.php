@@ -27,15 +27,18 @@ if ( ! function_exists( 'ab_theme_support' ) ) :
     // Add support for Block Styles.
     add_theme_support( 'wp-block-styles' );
 
-    // Add support for full and wide align images.
+    // Add support for full and wide align in Gutenberg.
     add_theme_support( 'align-wide' );
 
     // Add support for editor styles.
     add_theme_support( 'editor-styles' );
 
     // Enqueue editor styles.
-    //add_editor_style( 'dist/css/style-editor.min.css' );
-    //add_editor_style( 'dist/css/bundle.min.css' );
+    //add_editor_style( 'public/css/style-editor.css' );
+    //add_editor_style( 'public/css/site.css' );
+
+    //Customizer
+    add_theme_support( 'custom-logo' );
 
     // Add custom editor font sizes.
     add_theme_support(
