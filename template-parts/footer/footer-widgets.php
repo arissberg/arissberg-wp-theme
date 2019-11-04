@@ -45,11 +45,11 @@
 
   <div class="container mx-auto flex flex-wrap lg:flex-no-wrap items-center">
     <div class="w-full text-center lg:text-left text-2xs uppercase">
-      &copy; <?php echo date("Y"); ?> | <?= get_bloginfo( 'name' ) ?>
+      &copy; <?php echo date("Y"); ?> <?= get_bloginfo( 'name' ) ?>
     </div>
 
     <?php if ( true ) : ?>
-    <div class="widget w-full text-center lg:text-right">
+    <div class="widget w-full text-center lg:text-right my-4 lg:my-0">
       <?= ab_social_links( get_customizer_social_links() ); ?>
     </div>
     <?php endif; ?>

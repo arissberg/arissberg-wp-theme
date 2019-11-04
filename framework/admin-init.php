@@ -232,6 +232,14 @@ function ab_customize_register( $wp_customize ) {
     )
   );
 
+  $wp_customize->add_setting( 'social_youtube',
+    array(
+      'default' => '',
+      'transport' => 'refresh',
+      'sanitize_callback' => 'wp_filter_nohtml_kses'
+    )
+  );
+
   $wp_customize->add_control( 'social_facebook',
     array(
       'label' => __( 'Facebook Account' ),
@@ -268,6 +276,16 @@ function ab_customize_register( $wp_customize ) {
       'section' => 'social_accounts',
       'input_attrs' => array( // Optional.
       'placeholder' => __( 'Enter LinkedIn user' ),
+      ),
+    )
+  );
+
+  $wp_customize->add_control( 'social_youtube',
+    array(
+      'label' => __( 'Youtube Account' ),
+      'section' => 'social_accounts',
+      'input_attrs' => array( // Optional.
+      'placeholder' => __( 'Enter Youtube user' ),
       ),
     )
   );

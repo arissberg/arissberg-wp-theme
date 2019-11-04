@@ -24,7 +24,7 @@ module.exports = {
         500: '#a0aec0',
         600: '#718096',
         700: '#4a5568',
-        800: '#2d3748',
+        800: '#2d3748'
       },
       orange: '#EA7300',
 
@@ -37,9 +37,11 @@ module.exports = {
         600: '#000029',
       },
 
-      linkedin: '#007bb6',
-      youtube: '#ff0000',
+      facebook: '#3b5998',
       twitter: '#00aced',
+      instagram: '#c02c69',
+      linkedin: '#2b67bc',
+      youtube: '#e93223'
     },
     boxShadow: {
       default:
@@ -53,11 +55,11 @@ module.exports = {
       '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
       outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
-      none: 'none',
+      none: 'none'
     },
     buttonColors: theme => ({
       orange: theme('colors.orange'),
-      blue: theme('colors.blue.500'),
+      blue: theme('colors.blue.500')
     }),
     fontFamily: {
       sans: [
@@ -93,17 +95,17 @@ module.exports = {
       '4xl': '3rem',
       '5xl': '4rem',
       '6xl': '5rem',
-      '8xl': '6rem',
+      '8xl': '6rem'
     },
     fontWeight: {
       light: '300',
       normal: '400',
       medium: '500',
-      semibold: '600',
+      semibold: '600'
     },
     container: {
       center: true,
-      padding: '2rem',
+      padding: '2rem'
     },
     extend: {},
   },
@@ -115,7 +117,7 @@ module.exports = {
         colors: 'color',
         padding: false,
         margin: false,
-        buttonColors: 'buttonColor',
+        buttonColors: 'buttonColor'
       },
       {
         postcssEachVariables: true,

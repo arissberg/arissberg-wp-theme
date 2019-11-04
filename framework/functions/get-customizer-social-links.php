@@ -12,6 +12,7 @@ function get_customizer_social_links() {
     'twitter' => sanitize_text_field( get_theme_mod( 'social_twitter' ) ),
     'instagram' => sanitize_text_field( get_theme_mod( 'social_instagram' ) ),
     'linkedin' => sanitize_text_field( get_theme_mod( 'social_linkedin' ) ),
+    'youtube' => sanitize_text_field( get_theme_mod( 'social_youtube' ) ),
   );
 
   return array_filter($links);

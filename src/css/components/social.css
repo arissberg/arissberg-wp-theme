@@ -1,0 +1,31 @@
+.social-link {
+  @apply bg-blue-300 rounded-full p-2 h-10 w-10 inline-flex items-center justify-center;
+  transition: 0.15s background ease;
+
+  &:not(:last-of-type) {
+    @apply mr-2;
+  }
+
+}
+
+@each $social in facebook, twitter, instagram, linkedin, youtube {
+  .$(social):hover, .$(social):focus {
+    background: var(--color-$(social));
+  }
+}
+/*
+.facebook {
+  @apply text-facebook;
+}
+.twitter {
+  @apply text-twitter;
+}
+.instagram {
+  @apply text-instagram;
+}
+.linkedin {
+  @apply text-linkedin;
+}
+.youtube {
+  @apply text-youtube;
+} */

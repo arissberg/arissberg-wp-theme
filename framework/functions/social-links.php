@@ -13,6 +13,7 @@ function ab_social_links( array $links = array() ) {
     'facebook' => 'https://facebook.com/',
     'instagram' => 'https://instagram.com/',
     'linkedin' => 'https://www.linkedin.com/in/',
+    'youtube' => 'https://youtube.com/user/'
   );
 
   foreach ($links as $key => $value) {

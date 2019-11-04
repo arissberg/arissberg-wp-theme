@@ -16,12 +16,12 @@
   - Components and widgets
 ========================================================================== */
 @import "tailwindcss/components";
+@import "components/buttons.css";
+@import "components/social.css";
 /* @import "components/bg.scss"; */
 /* @import "components/bg-videoloop.scss"; */
-@import "components/buttons.css";
 /* @import "components/forms.scss"; */
 /* @import "components/post-meta.scss"; */
-/* @import "components/social.scss"; */
 /* @import "components/tab-accordion.scss"; */
 /* @import "components/video-overlay.scss"; */
 
