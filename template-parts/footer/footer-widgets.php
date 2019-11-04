@@ -48,9 +48,9 @@
       &copy; <?php echo date("Y"); ?> | <?= get_bloginfo( 'name' ) ?>
     </div>
 
-    <?php if ( is_active_sidebar( 'sidebar-footer-5' ) ) : ?>
+    <?php if ( true ) : ?>
     <div class="widget w-full text-center lg:text-right">
-      <?php dynamic_sidebar( 'sidebar-footer-5' ); ?>
+      <?= ab_social_links( get_customizer_social_links() ); ?>
     </div>
     <?php endif; ?>
 

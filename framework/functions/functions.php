@@ -8,6 +8,7 @@ $ab_functions = array(
   'can-show-post-thumbnail',
   'extract-youtube-id',
   'get-archive-template',
+  'get-customizer-social-links',
   'get-featured-posts',
   'get-latest-post',
   'get-post-meta',

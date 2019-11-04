@@ -158,7 +158,9 @@ endif;
 \* -------------------------------------------------------------------------- */
 
 function ab_customize_register( $wp_customize ) {
-  // Do stuff with $wp_customize, the WP_Customize_Manager object.
+  /**
+ * Custom white logo
+ */
   $wp_customize->add_setting(
     'custom_logo_white',
     array(
@@ -186,5 +188,88 @@ function ab_customize_register( $wp_customize ) {
       )
     )
   ));
+
+
+/**
+ * Social Accounts
+ */
+  $wp_customize->add_section( 'social_accounts',
+    array(
+      'title' => __( 'Social Accounts' ),
+      'description' => esc_html__( 'Add your social accounts below' ),
+    )
+  );
+
+  $wp_customize->add_setting( 'social_facebook',
+    array(
+      'default' => '',
+      'transport' => 'refresh',
+      'sanitize_callback' => 'wp_filter_nohtml_kses'
+    )
+  );
+
+  $wp_customize->add_setting( 'social_twitter',
+    array(
+      'default' => '',
+      'transport' => 'refresh',
+      'sanitize_callback' => 'wp_filter_nohtml_kses'
+    )
+  );
+
+  $wp_customize->add_setting( 'social_instagram',
+    array(
+      'default' => '',
+      'transport' => 'refresh',
+      'sanitize_callback' => 'wp_filter_nohtml_kses'
+    )
+  );
+
+  $wp_customize->add_setting( 'social_linkedin',
+    array(
+      'default' => '',
+      'transport' => 'refresh',
+      'sanitize_callback' => 'wp_filter_nohtml_kses'
+    )
+  );
+
+  $wp_customize->add_control( 'social_facebook',
+    array(
+      'label' => __( 'Facebook Account' ),
+      'section' => 'social_accounts',
+      'input_attrs' => array( // Optional.
+      'placeholder' => __( 'Enter Facebook user' ),
+      ),
+    )
+  );
+
+  $wp_customize->add_control( 'social_twitter',
+    array(
+      'label' => __( 'Twitter Account' ),
+      'section' => 'social_accounts',
+      'input_attrs' => array( // Optional.
+      'placeholder' => __( 'Enter Twitter user' ),
+      ),
+    )
+  );
+
+  $wp_customize->add_control( 'social_instagram',
+    array(
+      'label' => __( 'Instagram Account' ),
+      'section' => 'social_accounts',
+      'input_attrs' => array( // Optional.
+      'placeholder' => __( 'Enter Instagram user' ),
+      ),
+    )
+  );
+
+  $wp_customize->add_control( 'social_linkedin',
+    array(
+      'label' => __( 'LinkedIn Account' ),
+      'section' => 'social_accounts',
+      'input_attrs' => array( // Optional.
+      'placeholder' => __( 'Enter LinkedIn user' ),
+      ),
+    )
+  );
 }
 add_action( 'customize_register', 'ab_customize_register' );

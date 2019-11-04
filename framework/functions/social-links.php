@@ -1,7 +1,7 @@
 <?php
 if ( ! function_exists( 'ab_social_links' ) ) :
-/*
-* Undocumented Function
+/**
+* Returns social icons in a link
 */
 function ab_social_links( array $links = array() ) {
 
@@ -10,6 +10,8 @@ function ab_social_links( array $links = array() ) {
   //Should be a theme option
   $url_map = array(
     'twitter' => 'https://twitter.com/',
+    'facebook' => 'https://facebook.com/',
+    'instagram' => 'https://instagram.com/',
     'linkedin' => 'https://www.linkedin.com/in/',
   );
 
