@@ -18,7 +18,7 @@
 
 .btn, a.btn, .wp-block-button > a {
   @apply relative;
-  @apply font-sans text-blue-500 text-center uppercase;
+  @apply font-sans font-medium text-blue-500 text-center uppercase tracking-wider;
   @apply border-solid border border-blue-500 rounded-none;
   @apply text-2xs;
   @apply py-2 px-5;

@@ -18,7 +18,7 @@ function ab_register_widget_areas() {
 
   // Footer
   register_sidebars(
-    3, array(
+    5, array(
       'name'          => esc_html__( 'Footer Sidebar %d', 'arissberg' ),
       'id'            => 'sidebar-footer',
       'before_widget' => '<div class="widget %1$s %2$s">',

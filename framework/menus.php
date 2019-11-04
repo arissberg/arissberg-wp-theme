@@ -9,8 +9,7 @@ function ab_register_menus() {
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus( array(
       'primary-menu'   => 'Primary Menu',
-      'secondary-menu'  => 'Secondary Menu',
-      'footer-menu'    => 'Footer Menu',
+      'secondary-menu'  => 'Secondary Menu'
   ));
 
 }

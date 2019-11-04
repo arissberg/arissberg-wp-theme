@@ -4,16 +4,18 @@
     <div class="site-branding">
 
     <?php if ( isset($logo_default_url) || isset($logo_white_url) ) : ?>
-      <a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-        <img class="h-6 w-auto default-logo" src="<?php echo esc_html( $logo_default_url ); ?>" alt="<?php echo esc_html( $logo_text ); ?>">
-        <img class="h-6 w-auto white-logo" src="<?php echo esc_html( $logo_white_url ); ?>" alt="<?php echo esc_html( $logo_text ); ?>">
+      <a class="site-logo flex items-center" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+        <img class="h-10 w-auto default-logo" src="<?php echo esc_html( $logo_default_url ); ?>" alt="<?php echo esc_html( $logo_text ); ?>">
+        <?php if ( $logo_white_url ) : ?>
+        <img class="h-10 w-auto white-logo" src="<?php echo esc_html( $logo_white_url ); ?>" alt="<?php echo esc_html( $logo_text ); ?>">
+        <?php endif; ?>
       </a>
       <p class="sr-only" rel="home"><?php echo esc_html( $logo_text ); ?></p>
     <?php endif; ?>
 
     </div>
 
-    <div class="primary-menu-container">
+    <div class="primary-menu-container flex-1 mx-4">
       <div class="global-menu">
         <?= ( isset($primary_menu) ) ? $primary_menu : ''; ?>
       </div>

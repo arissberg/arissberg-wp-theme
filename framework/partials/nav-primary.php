@@ -10,12 +10,15 @@ if ( ! function_exists( 'ab_navbar_primary' ) ) :
 
   function ab_navbar_primary() {
 
+    $theme_logo_id = get_theme_mod( 'custom_logo' );
+    $theme_logo_white_id = get_theme_mod( 'custom_logo_white' );
+
     $template_args = array();
 
     // Get navbar settings.
     $template_args['logo_text']           = get_theme_mod( 'navbar_logo_text', get_bloginfo( 'name' ) );
-    $template_args['logo_default_url']    = get_theme_mod( 'navbar_logo_default_url', __t() . 'public/img/default-logo-black.svg' );
-    $template_args['logo_white_url']      = get_theme_mod( 'navbar_logo_white_url', __t() . 'public/img/default-logo-white.svg' );
+    $template_args['logo_default_url']    = ($theme_logo_id) ? wp_get_attachment_url($theme_logo_id) : __t() . 'public/img/default-logo-black.svg';
+    $template_args['logo_white_url']      = ($theme_logo_white_id) ? wp_get_attachment_url($theme_logo_white_id) : false;
 
     // Primary Menu
     if ( has_nav_menu( 'primary-menu' ) ) :

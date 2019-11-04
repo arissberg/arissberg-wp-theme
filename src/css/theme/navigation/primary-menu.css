@@ -18,7 +18,7 @@
   .menu {
 
     @screen lg {
-      @apply inline-flex;
+      @apply flex justify-end;
     }
 
     > li {
@@ -30,10 +30,11 @@
 
       > a {
         @apply text-white;
-        @apply text-xl font-normal;
+        @apply text-xl font-medium;
         @apply relative;
         @apply px-2 py-3 mx-2;
         @apply opacity-0;
+        @apply tracking-wider;
 
         @media screen and (max-width: 1023px) {
           @apply py-4;
@@ -44,7 +45,7 @@
 
         @screen lg {
           @apply text-blue-500;
-          @apply text-base font-normal opacity-100;
+          @apply text-xs font-medium opacity-100;
         }
 
         &:after {
@@ -75,13 +76,10 @@
 
       &.current-menu-item a, &.current_page_parent a, & > a:hover, & > a:focus {
         &:after {
-          @apply h-1;
+          height: 3px;
           opacity: 1;
           transform: translateY(0px);
         }
-      }
-
-      &.menu-item-has-children {
       }
 
     }

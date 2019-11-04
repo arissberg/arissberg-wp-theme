@@ -14,8 +14,11 @@
 \* -------------------------------------------------------------------------- */
 if ( ! function_exists( 'ab_custom_login_logo' ) ) :
 function ab_custom_login_logo() {
+  $theme_logo_id = get_theme_mod( 'custom_logo' );
+  $theme_logo_url = ($theme_logo_id) ? wp_get_attachment_url($theme_logo_id) : __t() . 'public/img/default-logo-black.svg';
+
   echo '<style type="text/css">
-  h1 a { background-image: url(' . get_bloginfo( 'template_directory' ) . '/public/img/aquent-dev6.svg) !important; height: 35px!important; width:300px!important; background-size: contain!important;}
+  h1 a { background-image: url(' . $theme_logo_url . ') !important; height: 80px!important; width:300px!important; background-size: contain!important;}
   body.login{ background: #fff; }
   </style>';
 }
@@ -148,3 +151,40 @@ if( !function_exists('ab_make_filename_lowercase') ) :
   }
   add_filter('sanitize_file_name', 'ab_make_filename_lowercase', 10);
 endif;
+
+
+/* -------------------------------------------------------------------------- *\
+    WP Customizer
+\* -------------------------------------------------------------------------- */
+
+function ab_customize_register( $wp_customize ) {
+  // Do stuff with $wp_customize, the WP_Customize_Manager object.
+  $wp_customize->add_setting(
+    'custom_logo_white',
+    array(
+      'default' => '',
+      'transport' => 'refresh',
+      'sanitize_callback' => 'absint'
+    )
+  );
+
+  $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'custom_logo_white',
+    array(
+      'label' => __( 'White Logo' ),
+      'description' => esc_html__( 'Upload an optional white version of the logo to be used on non-white backgrounds' ),
+      'section' => 'title_tagline',
+      'priority' => 9,
+      'mime_type' => 'image',  // Required. Can be image, audio, video, application, text
+      'button_labels' => array( // Optional
+        'select' => __( 'Select File' ),
+        'change' => __( 'Change File' ),
+        'default' => __( 'Default' ),
+        'remove' => __( 'Remove' ),
+        'placeholder' => __( 'No file selected' ),
+        'frame_title' => __( 'Select File' ),
+        'frame_button' => __( 'Choose File' ),
+      )
+    )
+  ));
+}
+add_action( 'customize_register', 'ab_customize_register' );
