@@ -41,7 +41,7 @@
 
 </section>
 
-<section class="widgets py-6 bg-blue-600 text-white">
+<section class="widgets py-6 bg-blue-300 text-white">
 
   <div class="container mx-auto flex flex-wrap lg:flex-no-wrap items-center">
     <div class="w-full text-center lg:text-left text-2xs uppercase">

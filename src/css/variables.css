@@ -9,7 +9,7 @@ $glide-modifier-separator: '--' !default; */
 
 :root {
   --wp-admin-bar-h: 32px;
-  --top-nav-h: 60px;
+  --top-nav-h: 80px;
 }
 
 @media screen and (max-width: 782px) {

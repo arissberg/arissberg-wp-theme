@@ -26,15 +26,18 @@ module.exports = {
         700: '#4a5568',
         800: '#2d3748'
       },
-      orange: '#EA7300',
+
+      gold: {
+        100: '#f7e6bf',
+        200: '#e9cd93',
+        300: '#cdba90',
+        400: '#b3975a',
+      },
 
       blue: {
-        100: '#96D8EA',
-        200: '#10A2DC',
-        300: '#0879B6',
-        400: '#005594',
-        500: '#053C7E',
-        600: '#000029',
+        100: '#7ec2ca',
+        200: '#6491c6',
+        300: '#002d62',
       },
 
       facebook: '#3b5998',
@@ -57,10 +60,6 @@ module.exports = {
       outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
       none: 'none'
     },
-    buttonColors: theme => ({
-      orange: theme('colors.orange'),
-      blue: theme('colors.blue.500')
-    }),
     fontFamily: {
       sans: [
         'gill-sans-nova',
@@ -105,7 +104,7 @@ module.exports = {
     },
     container: {
       center: true,
-      padding: '2rem'
+      padding: '2rem',
     },
     extend: {},
   },
@@ -117,7 +116,6 @@ module.exports = {
         colors: 'color',
         padding: false,
         margin: false,
-        buttonColors: 'buttonColor'
       },
       {
         postcssEachVariables: true,

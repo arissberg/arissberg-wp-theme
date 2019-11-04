@@ -5,7 +5,7 @@
  */
 ?>
 <div id="videoOverlayContainer" class="video-overlay video-hidden fixed bg-blueSemi w-full h-full inset-0">
-  <button aria-label="Close" class="btn-close hide-video text-white absolute right-0 bg-blue-400 rounded-full p-2 m-2">
+  <button aria-label="Close" class="btn-close hide-video text-white absolute right-0 bg-blue-300 rounded-full p-2 m-2">
     <?= d6_get_icon_svg('close', '30') ?>
   </button>
 

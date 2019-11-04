@@ -39,7 +39,7 @@
 	top: 0;
 	left: 0;
 	pointer-events: none;
-	border: 4px solid theme('colors.orange');
+	border: 4px solid theme('colors.gold.200');
 	border-radius: 50%;
 	animation-duration: 1.2s;
 	animation-name: intervalHamburgerBorder;
@@ -64,7 +64,7 @@
 
 .hamburger__line-in::before,
 .hamburger__line-in::after {
-	@apply bg-blue-400;
+	@apply bg-blue-300;
 	width: 28px;
 	height: 2px;
 	content: '';
