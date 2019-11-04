@@ -2,7 +2,7 @@
   position: relative;
 
   a {
-    @apply text-white;
+  @apply text-white;
   }
 
   .footer-widget-nav ul {
