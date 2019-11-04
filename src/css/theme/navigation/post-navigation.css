@@ -1,0 +1,28 @@
+.post-navigation {
+  @apply hidden;
+
+  @screen md {
+    @apply block;
+  }
+  .nav-links {
+    @apply flex items-stretch justify-between h-full ;
+  }
+
+  .nav-links a {
+    @apply h-auto;
+    width: 47%;
+
+    .meta-nav {
+      @apply text-xs mb-2 inline-block;
+    }
+
+    .post-title {
+      @apply font-normal;
+    }
+
+
+    &[rel~="next"] {
+      text-align: right;
+    }
+  }
+}

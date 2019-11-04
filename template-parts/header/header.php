@@ -1,5 +1,5 @@
 <div class="top-navbar-container w-screen">
-  <div class="container px-8 py-3 flex justify-between items-center">
+  <div class="container px-8 flex justify-between items-center">
 
     <div class="site-branding">
 

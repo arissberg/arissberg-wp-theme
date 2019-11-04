@@ -23,6 +23,7 @@
 
   <?php do_action('ab_body_start'); ?>
 
-  <main id="content" <?php ab_get_main_class(); ?> role="main">
+  <div class="site-container flex flex-col justify-between h-screen">
+    <main id="content" <?php ab_get_main_class(); ?> role="main">
 
-  <?php do_action( 'ab_site_start' ); ?>
+    <?php do_action( 'ab_site_start' ); ?>

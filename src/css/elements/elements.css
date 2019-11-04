@@ -7,8 +7,12 @@
 body {
   @apply bg-white overflow-x-hidden;
 
-  &.admin-bar {
-    margin-top: 32px;
+  /* &.admin-bar {
+    margin-top: var(--wp-admin-bar-h)
+  } */
+
+  > .site-container {
+    padding-top: var(--top-nav-h);
   }
 }
 

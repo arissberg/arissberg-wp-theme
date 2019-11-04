@@ -1,5 +1,5 @@
 h1, h2, h3, h4, h5, h6 {
-  @apply inline-block font-black text-blue-400 leading-none;
+  @apply block font-normal text-blue-400 leading-none;
 }
 
 p {
@@ -11,7 +11,7 @@ p {
 }
 
 h1 {
-  @apply leading-none;
+  @apply text-4xl leading-none;
 }
 
 h2 {
@@ -20,6 +20,10 @@ h2 {
 }
 
 h3 {
+  @apply text-2xl;
+}
+
+h4 {
   @apply text-xl;
 }
 

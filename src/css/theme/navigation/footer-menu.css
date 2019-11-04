@@ -1,0 +1,27 @@
+.footer-menu {
+
+  .menu {
+    @apply inline-flex;
+
+    > li {
+      display: inherit;
+      border-left: 1px solid rgba(white, 0.4);
+
+      > a {
+        @apply relative;
+        @apply text-xs;
+        @apply px-2;
+        @apply text-white;
+      }
+
+      &:first-of-type {
+        border: none;
+
+        > a {
+          @apply pl-0;
+        }
+      }
+
+    }
+  }
+}

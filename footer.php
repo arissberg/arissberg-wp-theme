@@ -1,14 +1,16 @@
 
-  <?php do_action( 'ab_site_end' ); ?>
+    <?php do_action( 'ab_site_end' ); ?>
 
-</main>
+  </main>
 
 
-<footer class="site-footer bg-white">
+  <footer class="site-footer bg-white">
 
-  <?php do_action( 'ab_site_footer' ); ?>
+    <?php do_action( 'ab_site_footer' ); ?>
 
-</footer>
+  </footer>
+
+</div>
 
 <?php do_action( 'ab_body_end' ); ?>
 

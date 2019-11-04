@@ -1,0 +1,59 @@
+/**
+* Should make this a tailwind plugin
+**/
+
+@responsive {
+    .flex-column-gap {
+        @apply -ml-2;
+
+        > * {
+            @apply pl-2;
+        }
+
+    }
+
+    /* .flex-row-gap {
+        @apply -mt-2;
+
+        > * {
+            @apply pt-2;
+        }
+
+    }
+
+    .flex-column-gap-2 {
+        @apply -ml-4;
+
+        > * {
+            @apply pl-4;
+        }
+
+    }
+
+    .flex-column-gap-6 {
+        @apply -ml-6;
+
+        > * {
+            @apply pl-6;
+        }
+
+    }
+
+    .flex-column-gap-8 {
+        @apply -ml-8;
+
+        > * {
+            @apply pl-8;
+        }
+
+    }
+
+    .flex-column-gap-12 {
+        @apply -ml-12;
+
+        > * {
+            @apply pl-12;
+        }
+
+    } */
+}

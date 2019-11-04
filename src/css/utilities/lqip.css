@@ -1,0 +1,54 @@
+
+.pk-lazyload {
+  background-color: transparent;
+}
+
+.pk-lazyload.pk-lqip, .pk-lazyloading.pk-lqip {
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  -webkit-clip-path: inset(0 0 0 0);
+  clip-path: inset(0 0 0 0);
+  -webkit-transition: 0.5s -webkit-filter linear;
+  transition: 0.5s -webkit-filter linear;
+  transition: 0.5s filter linear;
+  transition: 0.5s filter linear, 0.5s -webkit-filter linear;
+}
+
+.pk-lazyloaded.pk-lqip {
+  filter: blur(0);
+}
+
+
+.pk-lazyload.pk-lazyload-unstyled {
+  background-color: transparent;
+  -webkit-animation: none;
+  animation: none;
+}
+
+@-webkit-keyframes animate-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes animate-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/*# end */
+
+/*# sourceMappingURL=public-powerkit-lazyload.css.map */

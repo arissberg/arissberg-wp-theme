@@ -1,0 +1,82 @@
+@define-mixin button-icon {
+  .icon {
+    @apply pl-1;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &:hover, &:focus {
+    .icon {
+      transform: translateX(5px);
+     }
+  }
+}
+
+
+/* ================================ */
+/* Basic Button Styling */
+/* ================================ */
+
+.btn, a.btn, .wp-block-button > a {
+  @apply relative;
+  @apply font-sans text-blue-500 text-center uppercase;
+  @apply border-solid border border-blue-500 rounded-none;
+  @apply text-2xs;
+  @apply py-2 px-5;
+  @apply whitespace-no-wrap;
+  @apply cursor-pointer;
+  @apply shadow;
+  @apply inline-flex flex-no-wrap items-center;
+  transition: transform 0.2s ease-in-out;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @apply shadow-xl;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  @mixin button-icon;
+
+  &:hover, &:focus {
+    transform: scale(1.1);
+
+    &::after {
+      opacity: 1;
+    }
+
+  }
+
+  /* @screen lg {
+    @apply text-sm;
+  } */
+
+}
+
+.btn-small, a.btn-small {
+  @apply text-xs;
+}
+
+.post-more a {
+  @apply inline-flex flex-no-wrap items-center;
+  @mixin button-icon;
+}
+
+/* Build out the button styles */
+
+@each $key in var(--colors) {
+  .btn-$key, a.btn-$key {
+    background: var(--color-$(key));
+    border: none;
+    @apply text-white font-normal tracking-wider;
+  }
+}
+
+.wp-block-button.is-style-default .wp-block-button__link {
+  @extend .btn-blue;
+}

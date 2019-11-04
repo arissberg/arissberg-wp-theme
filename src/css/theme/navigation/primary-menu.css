@@ -1,0 +1,129 @@
+@media screen and (max-width: 1023px) {
+  .global-menu {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 100;
+  }
+}
+
+.primary-menu {
+
+  .menu {
+
+    @screen lg {
+      @apply inline-flex;
+    }
+
+    > li {
+      @apply block text-center;
+
+      @screen lg {
+        @apply inline-block;
+      }
+
+      > a {
+        @apply text-white;
+        @apply text-xl font-normal;
+        @apply relative;
+        @apply px-2 py-3 mx-2;
+        @apply opacity-0;
+
+        @media screen and (max-width: 1023px) {
+          @apply py-4;
+          transform: translateY(-100%);
+          transition-delay: 0s;
+          transition: transform 0.3s, opacity 0.3s;
+        }
+
+        @screen lg {
+          @apply text-blue-500;
+          @apply text-base font-normal opacity-100;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          @apply rounded;
+          @apply block;
+          @apply bg-orange;
+          opacity: 0;
+          transition: height 0.3s, opacity 0.3s, transform 0.3s;
+          transform: translateY(-5px);
+        }
+
+      }
+
+      &.is-opened a {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+        transition-delay: 0.85s;
+        transition-timing-function: ease;
+      }
+
+      &.current-menu-item a, &.current_page_parent a, & > a:hover, & > a:focus {
+        &:after {
+          @apply h-1;
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+
+      &.menu-item-has-children {
+      }
+
+    }
+  }
+
+  .sub-menu {
+
+  }
+
+}
+
+
+/* Mobile Nav background */
+.primary-menu-container {
+  line-height: 1em;
+  z-index: 1;
+
+  .shape-overlays {
+
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+  }
+
+  .shape-overlays.is-opened {
+    pointer-events: auto;
+  }
+
+  .shape-overlays__path:nth-of-type(1) {
+    fill: #000000;
+  }
+
+  .shape-overlays__path:nth-of-type(2) {
+    fill: #1d1d1f;
+  }
+
+  .shape-overlays__path:nth-of-type(3) {
+    fill: theme('colors.blue.400');
+  }
+
+}

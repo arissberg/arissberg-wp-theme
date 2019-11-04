@@ -2,7 +2,10 @@ const mix = require('laravel-mix');
 const tailwindcss = require('tailwindcss');
 const postcssImport = require('postcss-import');
 const postcssNested = require('postcss-nested');
-
+const postcssMixins = require('postcss-mixins');
+const postcssSimpleVars = require('postcss-simple-vars');
+const postcssEach = require('postcss-each');
+const postcssRulesVariables = require('postcss-at-rules-variables');
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -20,24 +23,28 @@ mix
   .webpackConfig({
     output: {
       chunkFilename: '[name].[chunkhash].js',
-      publicPath: '/wp-content/themes/cuvee-catherine',
+      publicPath: `/wp-content/themes/${__dirname}`,
     },
   })
 
   .js('src/js/site.js', 'public/js')
   .postCss('src/css/site.css', 'public/css')
 
-  // Cache busting
-  .version()
-
   .options({
     processCssUrls: false,
     postCss: [
       postcssImport(),
       tailwindcss('./tailwind.config.js'),
+      postcssMixins(),
+      // postcssSimpleVars(),
       postcssNested(),
+      postcssRulesVariables(),
+      postcssEach(),
     ],
   })
+
+  // Cache busting
+  .version()
 
   // Move images to public directory
   .copyDirectory('src/img', 'public/img')

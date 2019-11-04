@@ -1,0 +1,55 @@
+/* Index/archive navigation */
+.pagination {
+
+	.nav-links {
+    @apply flex flex-wrap items-center justify-center px-4;
+
+		& > * {
+			@apply px-2;
+
+			&.dots,
+			&.prev {
+				padding-left: 0;
+			}
+
+			&.dots,
+			&.next {
+				padding-right: 0;
+			}
+		}
+
+		a:focus {
+			text-decoration: underline;
+			outline-offset: -1px;
+
+			&.prev,
+			&.next {
+				text-decoration: none;
+
+				.nav-prev-text,
+				.nav-next-text {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.nav-next-text,
+		.nav-prev-text {
+			display: none;
+		}
+
+		@screen md {
+
+			padding: 0;
+
+			.prev,
+			.next {
+
+				& > * {
+					display: inline-block;
+					vertical-align: text-bottom;
+				}
+			}
+		}
+	}
+}

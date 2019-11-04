@@ -1,12 +1,16 @@
 .admin-bar .top-navbar-container {
-  top: 32px !important;
+  top: var(--wp-admin-bar-h);
 }
 
 .top-navbar-container {
   @apply absolute z-40 w-full top-0 left-0;
+  height: var(--top-nav-h);
   transform: translate3d(0,0,0);
   transition: transform 0.5s ease-in-out, color 0.5s ease-in-out, background 0.5s ease-in-out;
 
+  > .container {
+    height: var(--top-nav-h);
+  }
   &.has-scrolled {
     @apply bg-white;
     @apply shadow-lg;

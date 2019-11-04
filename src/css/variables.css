@@ -1,8 +1,19 @@
 /* ==========================================================================
-   Additional SASS Variables
+   Additional CSS Variables
   ========================================================================== */
 
-//GlideJS
+/* GlideJS
 $glide-class: 'glide' !default;
 $glide-element-separator: '__' !default;
-$glide-modifier-separator: '--' !default;
+$glide-modifier-separator: '--' !default; */
+
+:root {
+  --wp-admin-bar-h: 32px;
+  --top-nav-h: 60px;
+}
+
+@media screen and (max-width: 782px) {
+  :root {
+    --wp-admin-bar-h: 46px;
+  }
+}

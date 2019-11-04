@@ -8,7 +8,7 @@ get_header();
 
   <?php do_action( 'ab_page_before' ); ?>
 
-  <article id="page-<?php the_ID(); ?>" <?php post_class('entry-content'); ?>>
+  <article id="page-<?php the_ID(); ?>" <?php post_class('entry-content container'); ?>>
 
     <?php do_action( 'ab_page_start' ); ?>
 

@@ -3,42 +3,43 @@
   - Low-specificity, far-reaching rulesets like CSS resets
 ========================================================================== */
 @import "tailwindcss/base";
-/* @import "variables.scss"; */
+@import "variables.css";
 
 /* ==========================================================================
   Elements
     -  Unclassed HTML elements (p, h1 etc)
 ========================================================================== */
 @import "elements/elements.css";
-@import "typography/typography.css";
 
 /* ==========================================================================
   Components
   - Components and widgets
 ========================================================================== */
 @import "tailwindcss/components";
-/* @import "components/bg.scss";
-@import "components/bg-videoloop.scss";
-@import "components/buttons.scss";
-@import "components/forms.scss";
-@import "components/post-meta.scss";
-@import "components/social.scss";
-@import "components/tab-accordion.scss";
-@import "components/video-overlay.scss"; */
+/* @import "components/bg.scss"; */
+/* @import "components/bg-videoloop.scss"; */
+@import "components/buttons.css";
+/* @import "components/forms.scss"; */
+/* @import "components/post-meta.scss"; */
+/* @import "components/social.scss"; */
+/* @import "components/tab-accordion.scss"; */
+/* @import "components/video-overlay.scss"; */
 
 /* Required Core Stylesheet for GlideJS */
 @import "@glidejs/glide/dist/css/glide.core.min.css";
 /* @import "components/slider.scss"; */
 
 /* ==========================================================================
-  Site
+  Theme Stuff
   - Containers, navs, page structure etc.
 ========================================================================== */
-@import "site/site.css";
+@import "theme/theme.css";
 
 /* ==========================================================================
   Utilities
   - Helper classes and overrides
 ========================================================================== */
 @import "tailwindcss/utilities";
-/* @import "utilities/utilities.scss"; */
+@import "utilities/lqip.css";
+@import "utilities/separators.css";
+/* @import "utilities/flex.css"; */

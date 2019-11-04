@@ -1,4 +1,9 @@
 /*--------------------------------------------------------------
+## Typography
+--------------------------------------------------------------*/
+@import "typography/headings.css";
+
+/*--------------------------------------------------------------
 ## Containers
 --------------------------------------------------------------*/
 @import "containers";
@@ -8,7 +13,15 @@
 --------------------------------------------------------------*/
 @import "header/top-navbar";
 @import "header/hamburger";
-/* @import "navigation/navigation"; */
+
+/*--------------------------------------------------------------
+## Navigation
+--------------------------------------------------------------*/
+@import "navigation/primary-menu.css";
+@import "navigation/secondary-menu.css";
+@import "navigation/footer-menu.css";
+@import "navigation/pagination.css";
+@import "navigation/post-navigation.css";
 
 /*--------------------------------------------------------------
 ## Posts and pages
@@ -18,10 +31,6 @@
 /*--------------------------------------------------------------
 ## Blocks
 --------------------------------------------------------------*/
-/* @import "blocks/client-highlight";
-@import "blocks/client-logos";
-@import "blocks/team-member-slider";
-@import "blocks/team-members"; */
 
 /*--------------------------------------------------------------
 ## Misc
