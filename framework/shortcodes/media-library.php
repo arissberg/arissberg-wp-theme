@@ -1,14 +1,21 @@
 <?php
 
-if ( ! function_exists('d6_sc_get_image_from_media_library') ) :
+/**
+ * Get an image from the media library
+ *
+ * Usage:
+ * [media_library id="<id of item>" size="" class=""]
+ */
 
-function d6_sc_get_image_from_media_library( $attr, $content = null ) {
+if ( ! function_exists('ab_sc_get_image_from_media_library') ) :
+
+function ab_sc_get_image_from_media_library( $attr, $content = null ) {
 
     if ( ! isset( $attr['id'] ) ) {
         $output = '';
     }
 
-    $output = apply_filters( 'd6_media_library_shortcode', '', $attr, $content );
+    $output = apply_filters( 'ab_media_library_shortcode', '', $attr, $content );
 
     if ( $output != '' )
         return $output;
@@ -39,7 +46,7 @@ function d6_sc_get_image_from_media_library( $attr, $content = null ) {
     return $output;
 }
 
-add_shortcode( 'media_library', 'd6_sc_get_image_from_media_library' );
+add_shortcode( 'media_library', 'ab_sc_get_image_from_media_library' );
 
 endif;
 
