@@ -44,7 +44,7 @@
         }
 
         @screen lg {
-          @apply text-blue-500;
+          @apply text-blue-300;
           @apply text-xs font-medium opacity-100;
         }
 
@@ -58,7 +58,7 @@
           height: 1px;
           @apply rounded;
           @apply block;
-          @apply bg-orange;
+          @apply bg-gold-200;
           opacity: 0;
           transition: height 0.3s, opacity 0.3s, transform 0.3s;
           transform: translateY(-5px);
@@ -74,7 +74,8 @@
         transition-timing-function: ease;
       }
 
-      &.current-menu-item a, &.current_page_parent a, & > a:hover, & > a:focus {
+      /* &.current-menu-item a, &.current_page_parent a, & > a:hover, & > a:focus { */
+      & > a:hover, & > a:focus {
         &:after {
           height: 3px;
           opacity: 1;

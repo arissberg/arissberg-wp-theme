@@ -18,8 +18,8 @@
 
 .btn, a.btn, .wp-block-button > a {
   @apply relative;
-  @apply font-sans font-medium text-blue-500 text-center uppercase tracking-wider;
-  @apply border-solid border border-blue-500 rounded-none;
+  @apply font-sans font-medium text-center uppercase tracking-widest;
+  @apply border-solid border border-gold-400 rounded-none;
   @apply text-2xs;
   @apply py-2 px-5;
   @apply whitespace-no-wrap;
@@ -73,7 +73,6 @@
   .btn-$key, a.btn-$key {
     background: var(--color-$(key));
     border: none;
-    @apply text-white font-normal tracking-wider;
   }
 }
 

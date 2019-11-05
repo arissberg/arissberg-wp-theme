@@ -18,7 +18,7 @@ body {
 }
 
 a {
-  @apply text-blue-400;
+  @apply text-blue-300;
   display: inline-block;
   position: relative;
   @apply leading-tight;
@@ -37,7 +37,7 @@ a {
       height: 1px;
       @apply rounded;
       @apply block;
-      @apply bg-blue-200;
+      @apply bg-blue-100;
       opacity: 0;
       transition: height 0.3s, opacity 0.3s, transform 0.3s;
       transform: translateY(10px);

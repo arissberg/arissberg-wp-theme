@@ -1,1 +1,1 @@
-# arissberg-wp-theme
+# Henry of Pelham - Cuvée Catherine Wordpress Theme

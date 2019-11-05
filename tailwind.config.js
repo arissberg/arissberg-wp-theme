@@ -24,24 +24,27 @@ module.exports = {
         500: '#a0aec0',
         600: '#718096',
         700: '#4a5568',
-        800: '#2d3748'
+        800: '#2d3748',
       },
-      orange: '#EA7300',
+
+      gold: {
+        100: '#f7e6bf',
+        200: '#e9cd93',
+        300: '#cdba90',
+        400: '#b3975a',
+      },
 
       blue: {
-        100: '#96D8EA',
-        200: '#10A2DC',
-        300: '#0879B6',
-        400: '#005594',
-        500: '#053C7E',
-        600: '#000029',
+        100: '#7ec2ca',
+        200: '#6491c6',
+        300: '#002d62',
       },
 
       facebook: '#3b5998',
       twitter: '#00aced',
       instagram: '#c02c69',
       linkedin: '#2b67bc',
-      youtube: '#e93223'
+      youtube: '#e93223',
     },
     boxShadow: {
       default:
@@ -55,12 +58,8 @@ module.exports = {
       '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
       outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
-      none: 'none'
+      none: 'none',
     },
-    buttonColors: theme => ({
-      orange: theme('colors.orange'),
-      blue: theme('colors.blue.500')
-    }),
     fontFamily: {
       sans: [
         'gill-sans-nova',
@@ -95,29 +94,30 @@ module.exports = {
       '4xl': '3rem',
       '5xl': '4rem',
       '6xl': '5rem',
-      '8xl': '6rem'
+      '8xl': '6rem',
     },
     fontWeight: {
       light: '300',
       normal: '400',
       medium: '500',
-      semibold: '600'
+      semibold: '600',
     },
     container: {
       center: true,
-      padding: '2rem'
+      padding: '2rem',
     },
     extend: {},
   },
   variants: {},
-  corePlugins: {},
+  corePlugins: {
+    container: false,
+  },
   plugins: [
     require('tailwind-css-variables')(
       {
         colors: 'color',
         padding: false,
         margin: false,
-        buttonColors: 'buttonColor'
       },
       {
         postcssEachVariables: true,

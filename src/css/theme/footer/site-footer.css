@@ -1,16 +1,15 @@
 .site-footer {
   position: relative;
 
-  a {
-  @apply text-white;
-  }
+  /* a {
+    @apply text-white;
+  } */
 
   .footer-widget-nav ul {
     columns: 2;
     @apply text-white;
 
     li a {
-      @apply text-white;
       @apply leading-loose;
     }
   }

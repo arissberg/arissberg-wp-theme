@@ -3,7 +3,8 @@
 }
 
 .top-navbar-container {
-  @apply absolute z-40 top-0 left-0 bg-white shadow-lg;
+  @apply absolute z-40 top-0 left-0 bg-white shadow-md;
+  @apply border-gold-100 border-solid border-b-4;
   height: var(--top-nav-h);
   transform: translate3d(0,0,0);
   transition: transform 0.5s ease-in-out, color 0.5s ease-in-out, background 0.5s ease-in-out;

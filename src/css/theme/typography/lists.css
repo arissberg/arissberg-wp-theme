@@ -1,4 +1,4 @@
-.black-list, .orange-list {
+.black-list {
   @apply list-inside ml-8 mb-4;
 
     > li {
@@ -8,27 +8,4 @@
 
 .black-list {
   @apply list-disc;
-}
-
-.orange-list {
-  @apply list-inside ml-8 mb-4;
-  li::before {
-    content: "\203A";
-    display: inline-block;
-    @apply w-4;/* Also needed for space (tweak if needed) */
-  }
-
-  > li::before {
-    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-    @apply text-orange; /* Change the color */
-    font-weight: bold; /* If you want it to be bold */
-    display: inline-block; /* Needed to add space between the bullet and the text */
-    position: absolute;
-    @apply -ml-8;
-  }
-
-  li li {
-    @apply text-sm text-gray-600;
-  }
-
 }

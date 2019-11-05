@@ -1,15 +1,18 @@
 <?php
-if ( ! function_exists( 'd6_sc_get_svg_icon' ) ) :
+if ( ! function_exists( 'ab_sc_get_svg_icon' ) ) :
 /**
 * Get an SVG icon from the icon library
+*
+* Usage:
+* [svg_icon icon="<icon name in icon class>" size="36"]
 */
-function d6_sc_get_svg_icon( $attr ) {
+function ab_sc_get_svg_icon( $attr ) {
 
   if ( ! isset( $attr['icon'] ) ) {
     $output = '';
   }
 
-  $output = apply_filters( 'd6_svg_icon_shortcode', '', $attr );
+  $output = apply_filters( 'ab_svg_icon_shortcode', '', $attr );
 
   if ( $output != '' ) {
     return $output;
@@ -23,11 +26,11 @@ function d6_sc_get_svg_icon( $attr ) {
     $attr
   );
 
-  return d6_get_icon_svg( esc_attr($attr['icon']),esc_attr($attr['size'] ) );
+  return ab_get_icon_svg( esc_attr($attr['icon']),esc_attr($attr['size'] ) );
 
 }
 
-add_shortcode( 'svg_icon', 'd6_sc_get_svg_icon' );
+add_shortcode( 'svg_icon', 'ab_sc_get_svg_icon' );
 
 endif;
 
