@@ -21,7 +21,7 @@ a {
   @apply text-blue-300;
   display: inline-block;
   position: relative;
-  @apply leading-tight;
+  white-space: nowrap;
 }
 
 @define-mixin text-link {
@@ -37,7 +37,7 @@ a {
       height: 1px;
       @apply rounded;
       @apply block;
-      @apply bg-blue-100;
+      @apply bg-blue-300;
       opacity: 0;
       transition: height 0.3s, opacity 0.3s, transform 0.3s;
       transform: translateY(10px);
@@ -45,9 +45,9 @@ a {
 
     &:hover, &:focus {
       &:after {
-        height: 3px;
+        height: 2px;
         opacity: 1;
-        transform: translateY(0px);
+        transform: translateY(2px);
       }
     }
   }
@@ -55,5 +55,5 @@ a {
 }
 
 .page-content, .post-archive, .post-content, .site-footer {
-  @include text-link;
+  @mixin text-link;
 }
