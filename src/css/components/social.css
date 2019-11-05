@@ -1,5 +1,5 @@
 .social-link {
-  @apply bg-blue-200 rounded-full p-2 h-10 w-10 inline-flex items-center justify-center;
+  @apply bg-blue-200 rounded-full p-2 h-10 w-10 inline-flex items-center justify-center text-white;
   transition: 0.15s background ease;
 
   &:not(:last-of-type) {
