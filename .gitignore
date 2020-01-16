@@ -28,7 +28,9 @@ jspm_packages
 hot
 dist
 public
+screenshot*.png
 #mix-manifest.json
+
 
 # Optional REPL history
 .node_repl_history
