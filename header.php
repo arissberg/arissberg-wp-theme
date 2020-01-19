@@ -2,17 +2,9 @@
 <html <?php language_attributes(); ?>>
 <head>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7519277-3"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  <?= ab_get_google_analytics() ?>
 
-    gtag('config', 'UA-7519277-3');
-  </script> -->
-
-  <meta charset="<?php bloginfo( 'charset' ); ?>">
+  <meta charset="<?php bloginfo('charset'); ?>">
 
   <?php wp_head(); ?>
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -26,4 +18,4 @@
   <div class="site-container">
     <main id="content" <?php ab_get_main_class(); ?> role="main">
 
-    <?php do_action( 'ab_site_start' ); ?>
+    <?php do_action('ab_site_start'); ?>

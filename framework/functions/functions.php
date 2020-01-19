@@ -10,6 +10,7 @@ $ab_functions = array(
   'get-archive-template',
   'get-customizer-social-links',
   'get-featured-posts',
+  'get-google-analytics',
   'get-latest-post',
   'get-post-meta',
   'get-single-template',
@@ -28,12 +29,12 @@ $ab_functions = array(
   'show-more',
   'social-links',
   'svg-icons',
-  'theme-support',
+  'theme-support'
 );
 
-wp_file_loader( $ab_functions, 'functions' );
+wp_file_loader($ab_functions, 'functions');
 
 // Unset the global variable.
-unset( $ab_functions );
+unset($ab_functions);
 
 ?>
