@@ -18,16 +18,6 @@
 @import "tailwindcss/components";
 @import "components/buttons.css";
 @import "components/social.css";
-/* @import "components/bg.scss"; */
-/* @import "components/bg-videoloop.scss"; */
-/* @import "components/forms.scss"; */
-/* @import "components/post-meta.scss"; */
-/* @import "components/tab-accordion.scss"; */
-/* @import "components/video-overlay.scss"; */
-
-/* Required Core Stylesheet for GlideJS */
-@import "@glidejs/glide/dist/css/glide.core.min.css";
-/* @import "components/slider.scss"; */
 
 /* ==========================================================================
   Theme Stuff
@@ -42,4 +32,4 @@
 @import "tailwindcss/utilities";
 @import "utilities/lqip.css";
 @import "utilities/separators.css";
-/* @import "utilities/flex.css"; */
+@import "utilities/gutenberg.css";

@@ -1,5 +1,10 @@
-h1, h2, h3, h4, h5, h6 {
-  @apply block font-medium text-blue-300;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply block font-medium text-blue-300 leading-none mb-4;
 }
 
 p {
@@ -11,7 +16,7 @@ p {
 }
 
 h1 {
-  @apply text-4xl ;
+  @apply text-4xl;
 }
 
 h2 {
@@ -30,4 +35,3 @@ h4 {
 h5 {
   @apply text-lg;
 }
-

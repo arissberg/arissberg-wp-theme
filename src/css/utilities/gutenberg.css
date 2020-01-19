@@ -1,0 +1,41 @@
+/* Gutenberg stuff
+   Need to dequeue the wp-block-library for these to overide
+*/
+.wp-block-columns {
+  @apply flex flex-col;
+
+  @screen md {
+    @apply flex-row;
+  }
+}
+
+.is-vertically-aligned-top {
+  @apply self-start;
+}
+
+.is-vertically-aligned-center {
+  @apply self-center;
+}
+
+.is-vertically-aligned-bottom {
+  @apply self-end;
+}
+
+.wp-block-embed__wrapper {
+  iframe {
+    width: 100%;
+  }
+}
+
+.has-text-align-center {
+  text-align: center;
+}
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+  max-width: 40%;
+}
+
+.wp-block-buttons.aligncenter,
+.wp-block-calendar {
+  text-align: center;
+}
