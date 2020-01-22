@@ -57,3 +57,10 @@ a {
 .page-content, .post-archive, .post-content, .site-footer {
   @mixin text-link;
 }
+
+@each $key in var(--colors) {
+  .has-text-color.has-$(key)-color {
+    color: var(--color-$(key));
+    /* border: none; */
+  }
+}
