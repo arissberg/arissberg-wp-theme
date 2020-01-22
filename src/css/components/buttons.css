@@ -70,12 +70,14 @@
 /* Build out the button styles */
 
 @each $key in var(--colors) {
-  .btn-$key, a.btn-$key {
+  .btn-$key,
+  a.btn-$key,
+  .has-$(key)-background-color {
     background: var(--color-$(key));
-    border: none;
+    /* border: none; */
   }
 }
 
-.wp-block-button.is-style-default .wp-block-button__link {
+/* .wp-block-button.is-style-default .wp-block-button__link {
   @extend .btn-blue;
-}
+} */
