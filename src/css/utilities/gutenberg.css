@@ -35,6 +35,7 @@
   max-width: 40%;
 }
 
+.wp-block-button.aligncenter,
 .wp-block-buttons.aligncenter,
 .wp-block-calendar {
   text-align: center;
