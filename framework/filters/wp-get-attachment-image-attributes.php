@@ -16,7 +16,8 @@ if ( ! function_exists( 'ab_attachment_image_attributes' ) ) :
 
     //Don't LQIP SVG's
     if ( 'image/svg+xml' === $attachment->post_mime_type ) {
-      $attr['class'] .= ' pk-lazyload-disabled';
+      // $attr['class'] .= ' pk-lazyload-disabled';
+      $attr['class'] .= ' pk-lazyload-disabled type-svg';
     }
     return $attr;
   }
