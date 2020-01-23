@@ -1,9 +1,15 @@
+.entry-content {
+  ul {
+    @apply list-outside list-disc ml-8 my-4;
+  }
+}
+
 .black-list {
   @apply list-inside ml-8 mb-4;
 
-    > li {
-      @apply pb-1;
-    }
+  > li {
+    @apply pb-1;
+  }
 }
 
 .black-list {
